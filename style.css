@@ -1,0 +1,510 @@
+/* Systems & Automatic Control (EC217) — course site styles */
+
+:root {
+  --accent: #0f4c5c;          /* deep teal — headings, links, header band */
+  --accent-dark: #0a3541;
+  --accent-mid: #2c6d7d;
+  --accent-tint: #eaf1f3;     /* pale teal wash for table heads */
+
+  --text: #23201c;
+  --muted: #6b645c;
+  --line: #e2ddd3;            /* warm hairline */
+  --line-strong: #cfc7b9;
+
+  --paper: #faf8f4;           /* warm page background */
+  --surface: #ffffff;
+
+  --max-width: 860px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--paper);
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: break-word;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---------- Header ---------- */
+
+.hero {
+  background: var(--accent);
+  color: #fff;
+  border-bottom: 4px solid var(--accent-dark);
+}
+
+.hero > .container {
+  padding-top: 2.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: #a7cbd4;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.15rem;
+  line-height: 1.25;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  color: #fff;
+}
+
+.hero .code {
+  display: inline-block;
+  margin-left: 0.55rem;
+  padding: 0.2em 0.6em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.hero .instructor {
+  margin: 0.7rem 0 0;
+  color: #cfe3e8;
+}
+
+/* Nav strip along the bottom of the header */
+
+.hero nav {
+  background: var(--accent-dark);
+}
+
+.hero nav .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.6rem;
+}
+
+.hero nav a {
+  display: inline-block;
+  padding: 0.7rem 0;
+  color: #d5e6ea;
+  text-decoration: none;
+  font-size: 0.94rem;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+
+.hero nav a:hover,
+.hero nav a:focus {
+  color: #fff;
+  border-bottom-color: #7fb3c0;
+}
+
+/* ---------- Layout ---------- */
+
+main {
+  padding-bottom: 1rem;
+}
+
+section {
+  padding: 2.5rem 0 0.5rem;
+  scroll-margin-top: 1rem;
+}
+
+section + section {
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  margin: 0 0 1.1rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--accent);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--accent-dark);
+}
+
+h3 {
+  margin: 2rem 0 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent-mid);
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+ul {
+  margin: 0 0 1rem;
+  padding-left: 1.3rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+li::marker {
+  color: var(--accent-mid);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-dark);
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Resources ---------- */
+
+.resource-list {
+  list-style: none;
+  margin: 1.25rem 0 1rem;
+  padding: 0;
+}
+
+.resource-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1.25rem;
+  padding: 0.95rem 1.1rem;
+  margin-bottom: 0.7rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent-mid);
+  border-radius: 5px;
+}
+
+.resource-list li:hover {
+  border-color: var(--line-strong);
+  border-left-color: var(--accent);
+}
+
+.resource-title {
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.1rem;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: var(--accent);
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+.link-plain {
+  color: var(--accent-mid);
+}
+
+/* ---------- Tables ---------- */
+
+.table-wrap {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+}
+
+th,
+td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+thead th {
+  background: var(--accent-tint);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody th {
+  font-weight: 500;
+}
+
+tfoot th,
+tfoot td {
+  background: var(--accent-tint);
+  font-weight: 700;
+  color: var(--accent-dark);
+  border-bottom: none;
+  border-top: 1px solid var(--line-strong);
+}
+
+/* ---------- Contact ---------- */
+
+.contact-card {
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.35rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent-mid);
+  border-radius: 5px;
+}
+
+.contact-name {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: var(--accent-dark);
+}
+
+.contact-role {
+  margin: 0.15rem 0 1rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.contact-card .btn {
+  font-size: 0.92rem;
+  padding: 0.45rem 1rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  margin-top: 3rem;
+  padding: 1.6rem 0;
+  background: var(--accent-dark);
+  color: #b9d2d9;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0 0 0.2rem;
+}
+
+.footer-course {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+
+/* Tablet / small laptop */
+@media (max-width: 780px) {
+  body {
+    font-size: 16.5px;
+  }
+
+  .hero > .container {
+    padding-top: 2.25rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+
+  section {
+    padding-top: 2.15rem;
+  }
+
+  .resource-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 560px) {
+  body {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero > .container {
+    padding-top: 1.9rem;
+    padding-bottom: 1.35rem;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.11em;
+  }
+
+  .hero h1 {
+    font-size: 1.55rem;
+    line-height: 1.3;
+  }
+
+  .hero .code {
+    display: inline-block;
+    margin: 0.75rem 0 0;
+    font-size: 0.82rem;
+  }
+
+  .hero .instructor {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  /* Nav wraps onto a second row so every link stays visible */
+  .hero nav .container {
+    gap: 0 1.15rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+  }
+
+  .hero nav a {
+    padding: 0.55rem 0;
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+
+  section {
+    padding-top: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    padding-left: 0.6rem;
+    border-left-width: 3px;
+  }
+
+  h3 {
+    margin-top: 1.6rem;
+    font-size: 0.85rem;
+  }
+
+  .resource-list li {
+    padding: 0.85rem 0.95rem;
+  }
+
+  .resource-title {
+    font-size: 0.97rem;
+  }
+
+  /* Buttons get a comfortable tap target */
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+
+  th,
+  td {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.94rem;
+  }
+
+  thead th {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+  }
+
+  .contact-card {
+    padding: 1.1rem;
+  }
+
+  footer {
+    margin-top: 2.25rem;
+    padding: 1.35rem 0;
+    font-size: 0.86rem;
+  }
+}
+
+/* Narrow phones */
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Keep the email address on one line in the narrowest case */
+  .contact-card {
+    padding: 1rem 0.85rem;
+  }
+
+  .contact-card .btn {
+    font-size: 0.82rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .resource-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    white-space: normal;
+  }
+
+  .link-plain {
+    text-align: center;
+  }
+}
